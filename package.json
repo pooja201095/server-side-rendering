@@ -8,6 +8,8 @@
     "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
     "dev:build-server": "webpack --config webpack.server.js --watch",
     "dev:build-client": "webpack --config webpack.client.js --watch",
+    "dev:build-server-prod": "webpack --config webpack.server.js",
+    "dev:build-client-prod": "webpack --config webpack.client.js",
     "start:prod": "node build/bundle.js"
   },
   "author": "",
