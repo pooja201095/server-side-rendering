@@ -11,8 +11,8 @@ node {
      }
    }
    stage('docker build/push to aws ecr') {
-     docker.withRegistry('https://909422022653.dkr.ecr.us-east-1.amazonaws.com/ssr-react', 'AWS creds') {
-       def app = docker.build("node-docker-demo-aws:${commit_id}", '.').push()
+     docker.withRegistry('https://909422022653.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:aws') {
+       def app = docker.build("ssr-react/node-docker-demo-aws:${commit_id}", '.').push()
      }
    }
 }
